@@ -1,0 +1,36 @@
+.Menu {
+  background-color: black;
+  width: 100%;  /* Đặt chiều rộng cho menu */
+  position: relative;
+  padding: 10px 0; /* Thêm padding để có khoảng cách */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: fit-content; /* Kích thước vừa với nội dung */
+  display: flex; /* Hiển thị theo hàng ngang */
+}
+
+li {
+  display: inline-block; /* Để các mục menu nằm ngang */
+}
+
+li a {
+  text-decoration: none;
+  color: grey;
+  display: block;
+  padding: 10px 20px; /* Thêm padding để dễ bấm */
+  transition: background-color 0.3s;
+}
+
+li.active {
+  background-color: #4CAF50; /* Màu nền khi active */
+  width: auto; /* Không nên đặt width quá lớn */
+}
+
+li a:hover {
+  background-color: #333; /* Hiệu ứng hover */
+  color: white;
+}

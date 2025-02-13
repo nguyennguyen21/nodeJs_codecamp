@@ -1,3 +1,5 @@
+const { product } = require("./data");
+
 module.exports.item = ['item1', 'item2', 'item3', 'item4', 'item5', 'item6'];
 
 
@@ -7,4 +9,4 @@ const person = {
     city: 'New York'
 }
 
-module.exports.singlePerson = person
+module.exports.singlePerson = {product, people}

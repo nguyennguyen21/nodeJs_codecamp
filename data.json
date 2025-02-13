@@ -1,0 +1,45 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "name": "Product 1",
+            "price": 100,
+            "image": "https://example.com/image1.jpg",
+            "description": "Description for Product 1"
+        },
+        {
+            "id": 2,
+            "name": "Product 2",
+            "price": 200,
+            "image": "https://example.com/image2.jpg",
+            "description": "Description for Product 2"
+        },
+        {
+            "id": 3,
+            "name": "Product 3",
+            "price": 300,
+            "image": "https://example.com/image3.jpg",
+            "description": "Description for Product 3"
+        }
+    ],
+    "people": [
+        {
+            "id": 1,
+            "name": "John",
+            "age": 30,
+            "occupation": "Software Developer"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "age": 25,
+            "occupation": "Graphic Designer"
+        },
+        {
+            "id": 3,
+            "name": "Mike Johnson",
+            "age": 35,
+            "occupation": "Project Manager"
+        }
+    ]
+}
