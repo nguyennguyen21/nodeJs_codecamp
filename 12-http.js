@@ -22,6 +22,29 @@ const sever = Http.createServer((req, res) => {
 sever.listen(5000);
 
 
-    
+// const sever = http.createServer((req,res)=>{
+//     if (req.url === '/'){
+//         //Blocking code
+//         for (let i = 0; i < 1000; i++) {
+//             for (let j = 0; j < 1000; j++) {
+//                 console.log(`${i} ${j}`);
+//             }
+//         }
+//         res.end('Welcome to our home page');
+//     }
+//     if (req.url === '/about'){
+//         res.end('Here is our short history');
+//     }
+//    else{
+//     console.log("errol")
+//    }
+//     // console.log("request event");
+//     // res.end('Hello world');
+// })
+
+
+// sever.listen(5000,()=>{
+//     console.log('Server listening on port : 5000...');
+// })
 
 
