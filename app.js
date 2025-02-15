@@ -1,5 +1,5 @@
 const express = require('express')
-const { people, product } = require('./data.json');
+let { people, product } = require('./data.json');
 const app = express()
 // static assets
 app.use(express.static('./method-public'))
@@ -35,6 +35,33 @@ app.post('/api/postman/people',(req,res)=>{
     res.status(201).send({success:true, data:[...product,name]})
 })
 
+app.put('/api/people/:id', (req, res) => {
+    const { id } = req.params;
+    const { name } = req.body;
+
+    // Tìm người cần cập nhật
+    const person = people.find((person) => person.id === Number(id));
+    
+    if (!person) {
+        return res.status(400).json({ success: false, msg: "Vui lòng nhập ID hợp lệ" });
+    }
+
+    // Cập nhật dữ liệu
+    const newPeople = people.map((person) => {
+        if (person.id === Number(id)) {
+            return { ...person, name: name }; // Cập nhật đúng cách
+        }
+        return person;
+    });
+
+    // Gán lại danh sách mới
+    people = newPeople;
+
+    res.status(200).json({ success: true, data: newPeople });
+});
+app.delete('/api/people',(req,res)=>{
+    const people = people.find((person)=>person.id === Number(id))
+})
 
 app.post('/input-name',(req,res)=>{''
     const {name} = req.body
